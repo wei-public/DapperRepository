@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wei.DapperRepository", "Wei.DapperRepository\Wei.DapperRepository.csproj", "{92A9116A-7C54-469C-8C4B-D9B1FA93A12E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wei.Demo.WebApi", "Wei.Demo.WebApi\Wei.Demo.WebApi.csproj", "{D2A118F2-F0AC-44E7-8A58-0FC041E7F49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92A9116A-7C54-469C-8C4B-D9B1FA93A12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A9116A-7C54-469C-8C4B-D9B1FA93A12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A9116A-7C54-469C-8C4B-D9B1FA93A12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A9116A-7C54-469C-8C4B-D9B1FA93A12E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A118F2-F0AC-44E7-8A58-0FC041E7F49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A118F2-F0AC-44E7-8A58-0FC041E7F49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A118F2-F0AC-44E7-8A58-0FC041E7F49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A118F2-F0AC-44E7-8A58-0FC041E7F49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {448A3956-FFF4-425E-8500-18A96B8FED75}
+	EndGlobalSection
+EndGlobal

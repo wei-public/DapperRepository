@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wei.DapperRepository</name>
+    </assembly>
+    <members>
+        <member name="M:Wei.DapperRepository.RepositoryOptionExtension.AddDbFactory``1(Wei.DapperRepository.RepositoryOption)">
+            <summary>
+            添加数据库工厂
+            </summary>
+            <typeparam name="TDbFactory">IDbFactory的实现类型</typeparam>
+            <param name="option">配置</param>
+        </member>
+        <member name="M:Wei.DapperRepository.IDbFactory.GetConnection">
+            <summary>
+            数据库连接对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wei.DapperRepository.IDbFactory.TimeOut">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.IDbFactory.SqlExecuteBefore(System.String,System.Object)">
+            <summary>
+            sql执行之前回调
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="parameter">参数</param>
+        </member>
+        <member name="P:Wei.DapperRepository.DbFactory.TimeOut">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.DbFactory.SqlExecuteBefore(System.String,System.Object)">
+            <summary>
+            Sql执行之前回调
+            </summary>
+            <param name="sql"></param>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.GetConnection">
+            <summary>
+            数据库连接对象
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.BeginTrans(System.Data.IsolationLevel)">
+            <summary>
+            开始事务
+            </summary>
+            <param name="isolationLevel"></param>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            新增(批量)
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.InsertAsync(`0)">
+            <summary>
+            新增
+            </summary>
+            <param name="entity">实体</param>
+            <returns>新增后的实体</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新
+            </summary>
+            <param name="entity">实体(主键必须赋值)</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.UpdateAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Action{`0})">
+            <summary>
+            更新
+            </summary>
+            <param name="predicate">更新条件(不能为空)</param>
+            <param name="action">更新指定字段回调</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.DeleteAsync(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <param name="id">主键Id</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.DeleteAsync(`0)">
+            <summary>
+            删除
+            </summary>
+            <param name="entity">实体(主键必须赋值)</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            删除
+            </summary>
+            <param name="predicate">删除条件(不能为空)</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取第一个或者默认值
+            </summary>
+            <param name="predicate">条件</param>
+            <returns>实体</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Wei.DapperRepository.IRepository`1.GetAsync(System.Object)" -->
+        <member name="M:Wei.DapperRepository.IRepository`1.GetAllAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            查询所有
+            </summary>
+            <param name="predicate">查询条件</param>
+            <param name="orderBySql">排序sql  eg:order by id desc</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.GetPageAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageIndex">页码</param>
+            <param name="pageSize">每页条数</param>
+            <param name="predicate">查询条件</param>
+            <param name="orderBySql">排序sql(默认为主键降序排列)</param>
+            <returns>总条数,分页数据</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtention.AddDapperRepository``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Wei.DapperRepository.RepositoryOption})">
+            <summary>
+            注册DapperRepository
+            </summary>
+            <typeparam name="TDbFactory">IDbFactory实现类型</typeparam>
+            <param name="services">ServiceCollection</param>
+            <param name="optionAction">配置回调</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
