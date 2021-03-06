@@ -15,13 +15,22 @@ namespace Wei.DapperRepository
         private IDbTransaction _transaction;
         public abstract IDbFactory DbFactory { get; }
         public IDbConnection GetConnection() => _connection = DbFactory.GetConnection();
-        public void BeginTrans(IsolationLevel isolationLevel = IsolationLevel.ReadUncommitted)
+        public void BeginTrans()
         {
             if (_connection != null && _connection.State != ConnectionState.Open)
                 _connection.Open();
 
-            _transaction = _connection.BeginTransaction(isolationLevel);
+            _transaction = _connection.BeginTransaction();
         }
+
+        public void BeginTrans(IsolationLevel il)
+        {
+            if (_connection != null && _connection.State != ConnectionState.Open)
+                _connection.Open();
+
+            _transaction = _connection.BeginTransaction(il);
+        }
+       
         public void Rollback() => _transaction?.Rollback();
         public void Commit() => _transaction?.Commit();
 

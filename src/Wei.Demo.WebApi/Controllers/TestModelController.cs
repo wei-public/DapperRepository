@@ -18,31 +18,31 @@ namespace Wei.Demo.WebApi.Controllers
         private readonly IRepository<TestModelInt> _repository;
 
         //泛型Repository 指定DbFactory
-        private readonly IRepository<TestModelMultipeKey, MySqlDbFactory> _multipeKeyRepository;
+        //private readonly IRepository<TestModelMultipeKey, MySqlDbFactory> _multipeKeyRepository;
 
         //自定义Repository
         private readonly ITestModelRepository _testModelRepository;
         public TestModelController(IRepository<TestModelInt> repository,
-            IRepository<TestModelMultipeKey, MySqlDbFactory> multipeKeyRepository,
+            //IRepository<TestModelMultipeKey, MySqlDbFactory> multipeKeyRepository,
             ITestModelRepository testModelRepository)
         {
             _repository = repository;
-            _multipeKeyRepository = multipeKeyRepository;
+            //_multipeKeyRepository = multipeKeyRepository;
             _testModelRepository = testModelRepository;
         }
 
         [HttpGet]
-        public TestModelInt FirstOrDefault()
+        public Task<IEnumerable<TestModelInt>> GetAllAsync()
         {
-            var result = _repository.FirstOrDefault();
+            var result = _repository.GetAllAsync();
             return result;
         }
 
-        [HttpGet("custom-dbfactory")]
-        public Task<IEnumerable<TestModelMultipeKey>> GetAllAsync()
-        {
-            return _multipeKeyRepository.GetAllAsync();
-        }
+        //[HttpGet("custom-dbfactory")]
+        //public Task<IEnumerable<TestModelMultipeKey>> GetAllAsync()
+        //{
+        //    return _multipeKeyRepository.GetAllAsync();
+        //}
 
         [HttpPut("custom-reposotry")]
         public Task<TestModelInt> UpdateResultAsync(int id, string result)

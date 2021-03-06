@@ -16,8 +16,13 @@ namespace Wei.DapperRepository
         /// <summary>
         /// 开始事务
         /// </summary>
-        /// <param name="isolationLevel"></param>
-        void BeginTrans(IsolationLevel isolationLevel = IsolationLevel.ReadUncommitted);
+        void BeginTrans();
+
+        /// <summary>
+        /// 开始事务
+        /// </summary>
+        /// <param name="il"></param>
+        void BeginTrans(IsolationLevel il);
 
         /// <summary>
         /// 提交事务

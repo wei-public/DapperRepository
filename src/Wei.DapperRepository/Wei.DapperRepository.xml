@@ -46,11 +46,16 @@
             数据库连接对象
             </summary>
         </member>
+        <member name="M:Wei.DapperRepository.IRepository`1.BeginTrans">
+            <summary>
+            开始事务
+            </summary>
+        </member>
         <member name="M:Wei.DapperRepository.IRepository`1.BeginTrans(System.Data.IsolationLevel)">
             <summary>
             开始事务
             </summary>
-            <param name="isolationLevel"></param>
+            <param name="il"></param>
         </member>
         <member name="M:Wei.DapperRepository.IRepository`1.Commit">
             <summary>

@@ -41,7 +41,7 @@ namespace Wei.Demo.WebApi.Repositories
                 Commit();
                 return entity.Id;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Rollback();
                 return 0;
