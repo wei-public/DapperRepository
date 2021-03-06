@@ -10,8 +10,16 @@ namespace Wei.DapperRepository
 {
     public abstract class BaseRepository<TEntity> : IDisposable where TEntity : class
     {
-
         private IDbConnection _connection;
+
+        /// <summary>
+        /// 数据库连接对象
+        /// </summary>
+        public IDbConnection Connection
+        {
+            get { return _connection; }
+        }
+
         private IDbTransaction _transaction;
         public abstract IDbFactory DbFactory { get; }
         public IDbConnection GetConnection() => _connection = DbFactory.GetConnection();

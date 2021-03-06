@@ -9,7 +9,7 @@ Support  SqlServer/MySql/SqlLite</Description>
 Support  SqlServer/MySql/SqlLite</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/wei-public/DapperRepository</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wei-public/DapperRepository</PackageProjectUrl>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

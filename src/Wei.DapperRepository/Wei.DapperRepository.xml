@@ -4,6 +4,11 @@
         <name>Wei.DapperRepository</name>
     </assembly>
     <members>
+        <member name="P:Wei.DapperRepository.BaseRepository`1.Connection">
+            <summary>
+            数据库连接对象
+            </summary>
+        </member>
         <member name="M:Wei.DapperRepository.RepositoryOptionExtension.AddDbFactory``1(Wei.DapperRepository.RepositoryOption)">
             <summary>
             添加数据库工厂
