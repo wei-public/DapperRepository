@@ -9,6 +9,19 @@
             数据库连接对象
             </summary>
         </member>
+        <member name="M:Wei.DapperRepository.DapperRepository`1.SetTableName(System.String)">
+            <summary>
+            设置数据库表名称(对于表名称动态生成的，可以动态设置表名称)
+            <param name="tableName">表名称</param>
+            </summary>
+        </member>
+        <member name="M:Wei.DapperRepository.DapperRepository`2.SetTableName(System.String)">
+            <summary>
+            设置数据库表名称(对于表名称动态生成的，可以动态设置表名称)
+            </summary>
+            <param name="tableName">表名称</param>
+            <returns></returns>
+        </member>
         <member name="M:Wei.DapperRepository.RepositoryOptionExtension.AddDbFactory``1(Wei.DapperRepository.RepositoryOption)">
             <summary>
             添加数据库工厂

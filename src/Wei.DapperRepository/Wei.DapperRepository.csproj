@@ -5,11 +5,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>DapperRepository  CURD
 Support  SqlServer/MySql/SqlLite</Description>
-    <PackageReleaseNotes>DapperRepository  CURD
-Support  SqlServer/MySql/SqlLite</PackageReleaseNotes>
+    <PackageReleaseNotes>支持动态设置实体表名称</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/wei-public/DapperRepository</RepositoryUrl>
     <PackageProjectUrl>https://github.com/wei-public/DapperRepository</PackageProjectUrl>
-    <Version>1.0.0.3</Version>
+    <Version>1.0.0.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,7 +24,7 @@ Support  SqlServer/MySql/SqlLite</PackageReleaseNotes>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0" />
-    <PackageReference Include="Wei.DapperExtension" Version="1.0.0.1" />
+    <PackageReference Include="Wei.DapperExtension" Version="1.0.0.4" />
   </ItemGroup>
 
 </Project>
